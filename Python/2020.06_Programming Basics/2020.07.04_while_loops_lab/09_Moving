@@ -1,0 +1,18 @@
+available_width = int(input())
+available_length = int(input())
+available_height = int(input())
+number_of_boxes = input()
+
+total_space = available_width * available_length * available_height
+busy_space = 0
+
+while number_of_boxes != "Done":
+    number_of_boxes = int(number_of_boxes)
+    busy_space += number_of_boxes
+    if busy_space > total_space:
+        print(f"No more free space! You need {abs(busy_space - total_space)} Cubic meters more.")
+        break
+    number_of_boxes = input()
+
+if number_of_boxes == "Done":
+    print(f"{total_space - busy_space} Cubic meters left.")
