@@ -1,0 +1,21 @@
+numbers = int(input())
+
+p1 = 0
+p2 = 0
+p3 = 0
+
+for i in range(0, numbers):
+    num = int(input())
+    if num % 2 == 0:
+        p1 += 1
+    if num % 3 == 0:
+        p2 += 1
+    if num % 4 == 0:
+        p3 += 1
+
+
+p1_percentage = (p1 / numbers) * 100
+p2_percentage = (p2 / numbers) * 100
+p3_percentage = (p3 / numbers) * 100
+
+print(f"{p1_percentage:.2f}%\n{p2_percentage:.2f}%\n{p3_percentage:.2f}%")
