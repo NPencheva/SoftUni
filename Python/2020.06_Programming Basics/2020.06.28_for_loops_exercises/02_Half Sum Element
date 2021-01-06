@@ -1,0 +1,16 @@
+import sys
+numbers = int(input())
+max_number = -sys.maxsize
+sum_num = 0
+
+for i in range(0, numbers):
+    num = int(input())
+    if num > max_number:
+        max_number = num
+    sum_num += num
+
+if sum_num / 2 == max_number:
+    max_number = sum_num - max_number
+    print(f"Yes\nSum = {max_number}")
+else:
+    print(f"No\nDiff = {abs((max_number) - (sum_num - max_number))}")
