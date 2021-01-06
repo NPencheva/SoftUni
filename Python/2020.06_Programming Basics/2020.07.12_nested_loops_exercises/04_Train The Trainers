@@ -1,0 +1,22 @@
+people = int(input())
+presentation = input()
+all_grades = 0
+counter = 0
+ 
+while presentation != "Finish":
+    total_one = 0
+    average = 0
+ 
+    for i in range(1, people + 1):
+        grade = float(input())
+        counter += 1
+        total_one = total_one + grade
+        average = total_one / people
+ 
+    print(f"{presentation} - {average:.2f}.")
+    presentation = input()
+    all_grades += total_one
+ 
+ 
+if presentation == "Finish":
+    print(f"Student's final assessment is {all_grades / counter:.2f}.")
