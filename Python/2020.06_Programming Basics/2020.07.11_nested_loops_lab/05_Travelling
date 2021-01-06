@@ -1,0 +1,12 @@
+while True:
+    country = input()
+    if country == "End":
+        break
+    needed_money = float(input())
+
+    saved_money = 0
+
+    while saved_money < needed_money:
+        money = float(input())
+        saved_money += money
+    print(f"Going to {country}!")
