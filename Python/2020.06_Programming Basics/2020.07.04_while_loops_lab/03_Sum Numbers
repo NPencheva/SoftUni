@@ -1,0 +1,13 @@
+main_number = int(input())
+
+number = int(input())
+
+sum_numbers = 0
+
+while sum_numbers < main_number:
+    sum_numbers += number
+    if sum_numbers >= main_number:
+        break
+    number = int(input())
+
+print(sum_numbers)
