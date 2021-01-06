@@ -1,0 +1,16 @@
+numbers = int(input())
+
+sum_odd = 0
+sum_even = 0
+
+for position in range(0, numbers):
+    num = int(input())
+    if position % 2 == 0:
+        sum_even += num
+    else:
+        sum_odd += num
+
+if sum_even == sum_odd:
+    print(f"Yes\nSum = {sum_odd}")
+else:
+    print(f"No\nDiff = {abs(sum_odd - sum_even)}")
