@@ -1,0 +1,18 @@
+cake_width = int(input())
+cake_length = int(input())
+
+cake_pieces = cake_width * cake_length
+
+pieces_taken = input()
+total_pieces_taken = 0
+
+while pieces_taken != "STOP":
+    pieces_taken = int(pieces_taken)
+    total_pieces_taken += pieces_taken
+    if total_pieces_taken > cake_pieces:
+        print(f"No more cake left! You need {total_pieces_taken - cake_pieces} pieces more.")
+        break
+    pieces_taken = input()
+
+if pieces_taken == "STOP":
+    print(f"{cake_pieces - total_pieces_taken} pieces are left.")
