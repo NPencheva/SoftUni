@@ -1,0 +1,19 @@
+name = input()
+score = float(input())
+
+grade = 0
+fails = 0
+total_score = 0.0
+
+while grade < 12:
+    grade += 1
+    total_score += score
+
+    if score < 4.00:
+        fails += 1
+        print(f"{name} has been excluded at {grade} grade")
+        break
+    if grade == 12:
+        print(f"{name} graduated. Average grade: {(total_score / grade):.2f}")
+        break
+    score = float(input())
