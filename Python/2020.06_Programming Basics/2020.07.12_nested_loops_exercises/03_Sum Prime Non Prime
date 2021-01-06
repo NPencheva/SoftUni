@@ -1,0 +1,18 @@
+num = input()
+non = 0
+yes = 0
+while num != "stop":
+    num = int(num)
+    if num < 0:
+        print("Number is negative.")
+    else:
+        for i in range (2, num):
+            if num % i == 0:
+                non += num
+                break
+        else:
+            yes += num
+ 
+    num = input()
+print(f"Sum of all prime numbers is: {yes}")
+print(f"Sum of all non prime numbers is: {non}")
